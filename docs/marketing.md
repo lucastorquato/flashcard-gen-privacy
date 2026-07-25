@@ -1,5 +1,12 @@
 <style>
+  html {
+    overflow-x: hidden;
+  }
+
   body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
     background: #f3f6ff;
   }
 
@@ -48,7 +55,7 @@
 
   .marketing-hero {
     margin: 0 calc(50% - 50vw);
-    padding: 80px max(24px, calc((100vw - 1120px) / 2)) 0;
+    padding: 64px max(24px, calc((100vw - 1120px) / 2)) 0;
     overflow: hidden;
     color: var(--ink);
     text-align: center;
@@ -68,29 +75,32 @@
     max-width: 900px;
     margin: 0 auto;
     color: var(--ink);
-    font-size: clamp(52px, 9vw, 112px);
+    font-size: clamp(50px, 7.8vw, 96px);
     line-height: 0.98;
     font-weight: 900;
   }
 
   .marketing-subtitle {
     max-width: 780px;
-    margin: 44px auto 52px;
+    margin: 32px auto 38px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: clamp(28px, 5vw, 56px);
+    font-size: clamp(26px, 4vw, 44px);
     line-height: 1.14;
     font-weight: 400;
   }
 
   .marketing-hero-image {
     display: block;
-    width: min(860px, 100%);
+    width: auto;
+    max-width: min(760px, 100%);
+    max-height: 760px;
     margin: 0 auto;
+    object-fit: contain;
   }
 
   .marketing-section {
     margin: 0 calc(50% - 50vw);
-    padding: 88px max(24px, calc((100vw - 1120px) / 2));
+    padding: 72px max(24px, calc((100vw - 1120px) / 2));
     background: var(--paper);
   }
 
@@ -100,13 +110,13 @@
 
   .feature-grid {
     display: grid;
-    grid-template-columns: minmax(0, 0.92fr) minmax(320px, 0.78fr);
-    gap: 56px;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 52px;
     align-items: center;
   }
 
   .feature-grid.reverse {
-    grid-template-columns: minmax(320px, 0.78fr) minmax(0, 0.92fr);
+    grid-template-columns: minmax(280px, 420px) minmax(0, 1fr);
   }
 
   .feature-grid.reverse .feature-copy {
@@ -120,23 +130,23 @@
   .feature-copy h2 {
     margin: 0;
     color: var(--blue);
-    font-size: clamp(46px, 7vw, 90px);
+    font-size: clamp(44px, 6.2vw, 76px);
     line-height: 0.98;
     font-weight: 900;
   }
 
   .feature-copy p {
     max-width: 620px;
-    margin: 28px 0 0;
+    margin: 22px 0 0;
     color: var(--muted-blue);
-    font-size: clamp(22px, 2.8vw, 38px);
+    font-size: clamp(21px, 2.5vw, 31px);
     line-height: 1.25;
     font-weight: 400;
   }
 
   .feature-card {
-    margin-top: 36px;
-    padding: 24px;
+    margin-top: 28px;
+    padding: 22px;
     border: 1px solid var(--soft-line);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.62);
@@ -163,13 +173,16 @@
 
   .feature-shot img {
     display: block;
-    width: min(470px, 100%);
+    width: auto;
+    max-width: min(420px, 100%);
+    max-height: 760px;
     height: auto;
+    object-fit: contain;
   }
 
   .closing {
     margin: 0 calc(50% - 50vw);
-    padding: 96px max(24px, calc((100vw - 1120px) / 2));
+    padding: 84px max(24px, calc((100vw - 1120px) / 2));
     color: var(--ink);
     text-align: center;
     background: var(--near-black);
@@ -179,7 +192,7 @@
     max-width: 860px;
     margin: 0 auto;
     color: var(--ink);
-    font-size: clamp(44px, 7vw, 88px);
+    font-size: clamp(42px, 6vw, 74px);
     line-height: 1;
     font-weight: 900;
   }
@@ -255,6 +268,22 @@
 
     .feature-card {
       text-align: left;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .marketing-title {
+      font-size: clamp(46px, 14vw, 68px);
+    }
+
+    .marketing-subtitle {
+      font-size: clamp(26px, 8vw, 38px);
+    }
+
+    .marketing-hero-image,
+    .feature-shot img {
+      width: min(100%, 430px);
+      max-height: none;
     }
   }
 </style>
