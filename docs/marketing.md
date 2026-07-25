@@ -39,8 +39,8 @@
     --purple: #9f7cf7;
     --text: #15151a;
     --soft-line: rgba(12, 36, 136, 0.14);
-    width: min(1120px, calc(100vw - 32px));
-    margin: 0 auto;
+    width: 100%;
+    margin: 0;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", sans-serif;
   }
@@ -54,7 +54,6 @@
   }
 
   .marketing-hero {
-    margin: 0 calc(50% - 50vw);
     padding: 64px max(24px, calc((100vw - 1120px) / 2)) 0;
     overflow: hidden;
     color: var(--ink);
@@ -99,7 +98,6 @@
   }
 
   .marketing-section {
-    margin: 0 calc(50% - 50vw);
     padding: 72px max(24px, calc((100vw - 1120px) / 2));
     background: var(--paper);
   }
@@ -181,7 +179,6 @@
   }
 
   .closing {
-    margin: 0 calc(50% - 50vw);
     padding: 84px max(24px, calc((100vw - 1120px) / 2));
     color: var(--ink);
     text-align: center;
