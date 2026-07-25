@@ -41,6 +41,8 @@
     --soft-line: rgba(12, 36, 136, 0.14);
     width: 100%;
     margin: 0;
+    float: none;
+    clear: both;
     color: var(--text);
     font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", "Segoe UI", sans-serif;
   }
@@ -51,6 +53,13 @@
 
   .marketing-page a {
     color: inherit;
+  }
+
+  .marketing-page > div {
+    display: block;
+    width: 100%;
+    float: none;
+    clear: both;
   }
 
   .marketing-hero {
@@ -108,6 +117,9 @@
 
   .feature-grid {
     display: grid;
+    width: 100%;
+    float: none;
+    clear: both;
     grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
     gap: 52px;
     align-items: center;
@@ -286,14 +298,14 @@
 </style>
 
 <div class="marketing-page">
-  <section class="marketing-hero" aria-labelledby="marketing-title">
+  <div class="marketing-hero" aria-labelledby="marketing-title">
     <p class="marketing-eyebrow">FlipNote GEN</p>
     <h1 id="marketing-title" class="marketing-title">Turn Notes Into Flashcards</h1>
     <p class="marketing-subtitle">Type a topic to generate a study deck in seconds.</p>
     <img class="marketing-hero-image" src="./assets/marketing/turn-notes-into-flashcards.png" alt="FlipNote GEN generation screen showing a photosynthesis prompt and card settings.">
-  </section>
+  </div>
 
-  <section class="marketing-section">
+  <div class="marketing-section">
     <div class="feature-grid">
       <div class="feature-copy">
         <h2>Study one card at a time</h2>
@@ -307,9 +319,9 @@
         <img src="./assets/marketing/study-one-card-at-a-time.png" alt="FlipNote GEN study screen showing one photosynthesis flashcard question.">
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="marketing-section">
+  <div class="marketing-section">
     <div class="feature-grid reverse">
       <div class="feature-copy">
         <h2>Tap to See the Answer</h2>
@@ -323,9 +335,9 @@
         <img src="./assets/marketing/tap-to-see-answer.png" alt="FlipNote GEN answer screen explaining photosynthesis.">
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="marketing-section">
+  <div class="marketing-section">
     <div class="feature-grid">
       <div class="feature-copy">
         <h2>Save your decks</h2>
@@ -339,9 +351,9 @@
         <img src="./assets/marketing/save-your-decks.png" alt="FlipNote GEN completion dialog with save and exit options.">
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="marketing-section">
+  <div class="marketing-section">
     <div class="feature-grid reverse">
       <div class="feature-copy">
         <h2>Study in Multiple Languages</h2>
@@ -355,14 +367,14 @@
         <img src="./assets/marketing/study-in-multiple-languages.png" alt="FlipNote GEN marketing screenshot for studying in multiple languages.">
       </div>
     </div>
-  </section>
+  </div>
 
-  <section class="closing">
+  <div class="closing">
     <h2>Flashcards from any topic, ready when you are.</h2>
     <p>FlipNote GEN reduces the gap between having notes and actually studying them.</p>
     <div class="cta-row" aria-label="Marketing page actions">
       <span class="cta primary">Coming soon on the App Store</span>
       <a class="cta secondary" href="./privacy-policy.html">Privacy Policy</a>
     </div>
-  </section>
+  </div>
 </div>
